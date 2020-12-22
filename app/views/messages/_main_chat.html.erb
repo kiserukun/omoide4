@@ -6,7 +6,7 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-       <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
+       <%= link_to "削除する", room_path(@room), method: :delete, data: { confirm: '削除してもいいですか?' } %>
     </div>
   </div>
 </div>
@@ -18,10 +18,10 @@
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+    <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージ' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden' %>
+      <%= f.file_field :images, multiple: true,class: 'hidden' %>
     </label>
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
