@@ -7,17 +7,7 @@
     </label>
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
+  <div id="image-list"></div>
 <% end %>
 
-
-<div class="contents row">
-  <div class="container">
-    <h3>投稿する</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
-      <%= form.text_field :name, placeholder: "Nickname" %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "text", rows: "10" %>
-      <%= form.submit "SEND" %>
-    <% end %>
-  </div>
-</div>
+<%= image_tag @message.images, id: 'image' if @message.images.present? %> 
