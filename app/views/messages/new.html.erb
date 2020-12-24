@@ -1,0 +1,18 @@
+<div class="contents row">
+<%= form_with model: [@room, @message], local: true do |f| %>
+  <div class="container">
+  <h3>投稿する</h3>
+    <%= f.text_area :content, placeholder: '思い出' %>
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :images, multiple: true,class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'form-submitt' %>
+  <div id="image-list"></div>
+<% end %>
+<% @message.images.each do |image| %>
+  <%= image_tag image, class: 'images' %>
+<% end %>
+</div>
+ 

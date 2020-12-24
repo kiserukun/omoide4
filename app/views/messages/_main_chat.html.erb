@@ -6,7 +6,7 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-       <%= link_to "削除する", room_path(@room), method: :delete, data: { confirm: '削除してもいいですか?' } %>
+       <%= link_to "削除", room_path(@room), method: :delete, data: { confirm: '削除してもいいですか?' } %>
     </div>
   </div>
 </div>
@@ -15,14 +15,9 @@
 <%= render partial: 'message', collection: @messages %>
 </div>
 
-
-<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
-  <div class="form-input">
-    <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージ' %>
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <%= f.file_field :images, multiple: true,class: 'hidden' %>
-    </label>
-  </div>
-  <%= f.submit '送信', class: 'form-submit' %>
+<%= link_to(new_room_message_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>投稿</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
+
+

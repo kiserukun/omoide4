@@ -2,15 +2,15 @@
   display: flex;
 }
 .side-bar {
-  background-color: #f3aa80;
-  width: 300px;
+  background-color: #ffd0fbf6;
+  width: 200px;
   height: 100vh;
 }
 
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #f3aa80;
+  background-color: #F57C37;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@
 }
 
 .rooms {
-  background-color: #f3aa80;
+  background-color: #F57C37;
   height: calc(100vh - 100px);
   padding: 0 20px;
 }
@@ -49,11 +49,11 @@
 
 .chat {
   background-color: #ffffff;
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
 }
 
 .chat-header {
-  height: 100px;
+  height: 80px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -61,23 +61,23 @@
 .header-title {
   color: #333;
   font-size: 24px;
-  margin-top: 36px;
+  margin-top: 26px;
 }
 
 .header-button {
-  margin-top: 40px;
+  margin-top: 26px;
 }
 
 .header-button a {
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 15px;
 }
 
 .messages {
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 80px);
   padding: 46px 40px 0;
   overflow: scroll;
 }
@@ -130,7 +130,7 @@
 }
 
 .form-submit {
-  background-color: #38AEF0;
+  background-color: #F57C37;
   border: none;
   color: white;
   font-size: 16px;
@@ -141,14 +141,24 @@
 
 .form-image {
   font-size: 12px;
-  background-color: lightblue;
+  background-color:#F57C37;
   color: white;
   padding: 12px;
-  width: 60px;
+  width: 250px;
   margin: 5px 10px;
   text-align: center;
+}
+.form-image:hover {
+  cursor: pointer;
+  background-color: #ffd7b6;
+}
+.textarea {
+  resize: none;
+  width:300px;
+  height:200px;
 }
 
 .hidden {
   display: none;
 }
+
